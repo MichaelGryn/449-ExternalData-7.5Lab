@@ -1,7 +1,31 @@
 ---
 layout: layout.liquid
-title: 11ty Boilerplate
+title: Home
 ---
 
-<h1>Yet Another 11ty <strong>Boilerplate</strong></h1>
-<img alt="pine" src="/images/pine.png" width="50" />
+<h1 class="text-7xl font-bold mt-[10px] mb-[10px]">Alpine API Usage</h1>
+
+<p class="text-base w-[600px] mx-auto"> One of my favorite things to make for myself when I have the time, whether its homemade or premade, is chocolate chip cookies. With a simple list of ingredients:</p>
+
+<div class="mx-auto w-[150px] mt-[10px] mb-[10px]" x-data="{ingredientsList: $fetchjson('https://dummyjson.com/recipes/3', jsonItem='ingredients')}">
+    <ul class="list-disc list-inside text-left">
+        <template x-for="item in ingredientsList">
+            <li x-text="item"></li>
+        </template>
+    </ul>
+</div>
+
+<p class="text-base w-[600px] mx-auto mb-[20px]">Assembling the batter takes no more than 10-15 minutes with another 12 in the oven, making a delicious treat in no time.</p>
+
+
+<p class="text-base w-[600px] mx-auto">When originally building my computer in 7th grade, I had a few different options for storage. I decided to have a 2TB hard drive and 1TB SSD because that work take care of a majority of my files and games until I upgraded far in the future.</p>
+
+<div x-data="{thumbImage: $fetchjson('https://fakestoreapi.com/products/12', jsonItem='image')}">
+    <img class="mx-auto w-[400px] rounded-[40px] mt-[30px] mb-[30px]" alt="thumbnail" x-bind:src="thumbImage" />
+</div>
+
+<p class="text-base w-[600px] mx-auto">Once I finally started to max out my storage with the amount of video games I was downloading from Steam, I truly needed better performance than a 4 year old hard drive and upgraded to the latest and greatest: an NVMe SSD that is tucked right into the motherboard (not pictured below, that's just a normal SSD that is connected with a SATA cable)</p>
+
+<div x-data="{thumbImage: $fetchjson('https://fakestoreapi.com/products/10', jsonItem='image')}">
+    <img class="mx-auto w-[400px] rounded-[40px] mt-[30px] mb-[30px]" alt="thumbnail" x-bind:src="thumbImage" />
+</div>
